@@ -12,7 +12,7 @@ function Calculadora() {
       this.equal();
     });
   };
-
+ 
   this.capturaCliques = () => {
     document.addEventListener("click", (event) => {
       const el = event.target;
@@ -42,7 +42,6 @@ function Calculadora() {
     this.display.focus();
   };
 
-  
   this.clear = () => (this.display.value = "");
   this.delete = () => (this.display.value = this.display.value.slice(0, -1));
 }
