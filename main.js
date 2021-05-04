@@ -12,7 +12,7 @@ function Calculadora() {
       this.equal();
     });
   };
- 
+
   this.capturaCliques = () => {
     document.addEventListener("click", (event) => {
       const el = event.target;
@@ -48,3 +48,18 @@ function Calculadora() {
 
 const calculadora = new Calculadora();
 calculadora.inicia();
+
+anime({
+  targets: ".calculadora-wrapper",
+
+  translateX:[
+    {value: 250, duration: 800}, {value: -250, duration: 800}, {value: 0}
+  ],
+  rotate: {
+    value: '+=2turn', // 0 + 2 = '2turn'
+    easing: 'easeInOutSine',
+  },
+
+  delay: 2000
+
+});
