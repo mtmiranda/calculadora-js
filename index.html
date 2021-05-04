@@ -9,51 +9,66 @@
     <title>Calculadora</title>
   </head>
   <body>
-    <section class="container flex-centered">
-      <div class="calculadora-wrapper">
-        <h1>Calculadora</h1>
-        <table class="calculadora">
-          <tr>
-            <td colspan="4"><input type="text" class="display" autofocus /></td>
-          </tr>
+    <div id="bg-body">
+      <section class="container flex-centered">
+        <div class="calculadora-wrapper">
+          <div class="calculadora-wrapper__header">
+            <h1 class="calculadora-wrapper__title">Calculadora</h1>
+            <img class="calculadora-icon" src="./assets/calculator.png" />
+          </div>
+          <table class="calculadora">
+            <tr>
+              <td colspan="4">
+                <input type="text" class="display" autofocus />
+              </td>
+            </tr>
 
-          <tr>
-            <td><button class="btn btn-clear">C</button></td>
-            <td><button class="btn btn-num">(</button></td>
-            <td><button class="btn btn-num">)</button></td>
-            <td><button class="btn btn-num">/</button></td>
-          </tr>
+            <tr>
+              <td><button class="btn btn-clear">C</button></td>
+              <td><button class="btn btn-num">(</button></td>
+              <td><button class="btn btn-num">)</button></td>
+              <td><button class="btn btn-num">/</button></td>
+            </tr>
 
-          <tr>
-            <td><button class="btn btn-num">7</button></td>
-            <td><button class="btn btn-num">8</button></td>
-            <td><button class="btn btn-num">9</button></td>
-            <td><button class="btn btn-num">*</button></td>
-          </tr>
+            <tr>
+              <td><button class="btn btn-num">7</button></td>
+              <td><button class="btn btn-num">8</button></td>
+              <td><button class="btn btn-num">9</button></td>
+              <td><button class="btn btn-num">*</button></td>
+            </tr>
 
-          <tr>
-            <td><button class="btn btn-num">4</button></td>
-            <td><button class="btn btn-num">5</button></td>
-            <td><button class="btn btn-num">6</button></td>
-            <td><button class="btn btn-num">+</button></td>
-          </tr>
+            <tr>
+              <td><button class="btn btn-num">4</button></td>
+              <td><button class="btn btn-num">5</button></td>
+              <td><button class="btn btn-num">6</button></td>
+              <td><button class="btn btn-num">+</button></td>
+            </tr>
 
-          <tr>
-            <td><button class="btn btn-num">1</button></td>
-            <td><button class="btn btn-num">2</button></td>
-            <td><button class="btn btn-num">3</button></td>
-            <td><button class="btn btn-num">-</button></td>
-          </tr>
-          <tr>
-            <td><button class="btn btn-num">.</button></td>
-            <td><button class="btn btn-num">0</button></td>
-            <td><button class="btn btn-del">&laquo;</button></td>
-            <td><button class="btn btn-eq">=</button></td>
-          </tr>
-        </table>
-      </div>
-    </section>
+            <tr>
+              <td><button class="btn btn-num">1</button></td>
+              <td><button class="btn btn-num">2</button></td>
+              <td><button class="btn btn-num">3</button></td>
+              <td><button class="btn btn-num">-</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn btn-num">.</button></td>
+              <td><button class="btn btn-num">0</button></td>
+              <td><button class="btn btn-del">&laquo;</button></td>
+              <td><button class="btn btn-eq">=</button></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
 
+    <script>
+      anime({
+        targets: ".calculadora-wrapper",
+        translateX: 250,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
