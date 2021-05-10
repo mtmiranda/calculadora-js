@@ -2,11 +2,12 @@
 
 :root {
   --bgbody-color: #14213d;
+  --color-white: #ffffff;
   --primary-color: #2b6d9547;
   --secondary-color: #f76c6c;
   --btn-stdcolor: #dfdfdf;
   --btn-color-operations: #5c6bc0;
-  --btn-color-clear: #f2b239 
+  --btn-color-clear: #f2b239
 }
 
 * {
@@ -14,23 +15,43 @@
   outline: 0;
 }
 
-body {
+html {
+  height: 100%;
+}
+
+body,
+footer,
+p {
   margin: 0;
   padding: 0;
-  background: var(--primary-color); 
+}
+
+body {
+  background: var(--primary-color);
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
-  overflow: hidden;
+  min-height: 100%;
+  overflow: auto;
 }
 
-body > #bg-body{
+body>#bg-body {
   height: 100%;
   width: 100%;
-  position: absolute;
-  clip-path: polygon(43.28% 0.65%, 99.57% 0.78%, 99.59% 60.11%, 68.19% 99.35%, 5px 99.4%, 8px 0.43%, 23% 18%);
-  z-index: -1;
+  clip-path: polygon(30.63% 0.96%, 99.57% 0.78%, 99.59% 60.11%, 68.19% 99.35%, 5px 99.4%, 8px 0.43%, 16.53% 15.97%);
   background-color: var(--bgbody-color);
+}
+
+@media(max-width: 1024px) {
+  body>#bg-body {
+    clip-path: polygon(25% 0.8%, 99.57% 0.78%, 99.59% 60.11%, 76.59% 99.35%, 5px 99.4%, 8px 0.43%, 13.33% 11.55%);
+  }
+}
+
+@media(max-width: 660px) {
+  body>#bg-body {
+    clip-path: polygon(16.24% 0.95%, 99.57% 0.78%, 99.59% 60.11%, 87.77% 99.20%, 5px 99.4%, 8px 0.43%, 9.1% 6.9%);
+  }
 }
 
 .flex-centered {
@@ -51,15 +72,18 @@ body > #bg-body{
   max-width: 640px;
   padding: 20px;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
 }
 
-.calculadora-wrapper__header{
+.calculadora-wrapper__header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.calculadora-icon{
+.calculadora-icon {
   margin: 0 10px;
   width: 32px;
   height: 32px;
@@ -99,30 +123,42 @@ input:focus {
   border: none;
   background: var(--btn-stdcolor);
   cursor: pointer;
+  border-radius: 25px;
 }
 
-tr td:nth-last-child(-n+1) > button:not(.btn-eq) {
+tr td:nth-last-child(-n+1)>button:not(.btn-eq) {
   background: var(--btn-color-operations);
 }
 
-tr td:nth-last-child(-n+1) > button:not(.btn-eq):hover{
-  background-color: var(--btn-color-operations); 
+tr td:nth-last-child(-n+1)>button:not(.btn-eq):hover {
+  background-color: var(--btn-color-operations);
   filter: opacity(80%);
 }
 
-.btn-eq{
+.btn-eq {
   background-color: var(--secondary-color);
 }
 
-.btn-clear{
+.btn-clear {
   background-color: var(--btn-color-clear);
 }
 
-.btn-eq:hover, .btn-clear:hover{
+.btn-clear,
+.btn-eq {
+  border-radius: 10px;
+}
+
+.btn-eq:hover,
+.btn-clear:hover {
   filter: opacity(80%);
 }
 
 
 .btn:hover:not(.btn-eq, .btn-clear) {
   background: #9e9e9e;
+}
+
+.footer-copyright {
+  color: var(--color-white);
+  text-align: center;
 }
