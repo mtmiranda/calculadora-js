@@ -52,14 +52,15 @@ calculadora.inicia();
 anime({
   targets: ".calculadora-wrapper",
 
-  translateX:[
-    {value: 250, duration: 800}, {value: -250, duration: 800}, {value: 0}
+  translateX: [
+    { value: 250, duration: 800 },
+    { value: -250, duration: 800 },
+    { value: 0 },
   ],
   rotate: {
-    value: '+=2turn', // 0 + 2 = '2turn'
-    easing: 'easeInOutSine',
+    value: "+=2turn", // 0 + 2 = '2turn'
+    easing: "easeInOutSine",
   },
 
-  delay: 2000
-
+  delay: 1000,
 });
