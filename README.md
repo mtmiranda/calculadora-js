@@ -6,7 +6,7 @@ Projeto de uma calculadora em HTML5, CSS3 e Vanilla Js, utilizando uma bibliotec
 
 ## **Start**
 
-👇 Abra index.html para carregar a página no browser de sua preferência.
+Abra index.html para carregar a página no browser de sua preferência.
 
 OU (visualize pelo link abaixo 👇)
 
